@@ -25,13 +25,17 @@ const tl1 = [
       		}
     	]
 	}
-]
+];
 
 const tl2 = [
-	{
-    	situation: "Vous êtes mort psk 3D"
-   	},
-	{
-    	situation: "Vous êtes mort psk grande école"
-   	}
-]
+    {
+        situation: "Vous êtes mort psk 3D",
+        answers: [
+            answer1 = {
+                content: "Recommencer",
+                target: [0, 0]
+            }
+        ],
+    }
+];
+
