@@ -12,9 +12,6 @@ const templateCore = (situation, choices) => {
            <div class="bubbleText">
                <p class="text situation">${situation}</p>
                <div class="answerContainer">
-                  <!-- <p class="text answer">bachelor 3D</p>
-                   <p class="text answer">bachelor Web</p>
-                   <p class="text answer">grande école</p> -->
                </div>
                <div class="arrow-left"></div>
            </div>
@@ -31,7 +28,6 @@ const templateCore = (situation, choices) => {
         myAnswer.classList.add('text', 'answer');
         answerContainer.appendChild(myAnswer);
     }
-    console.log(myDiv);
     return myDiv;
 };
 
@@ -50,14 +46,4 @@ const display = (situation, choices) => {
     }
 };
 
-
 display(timeLine[0][0].situation, timeLine[0][0].answers);
-
-/*let template = `
-    <p>${situation}</p>
-`;*/
-//let templateChoice = ``;
-//for (let i = 0; i < choices.length; i++) {
-//templateChoice += `<div data-target="${choices[i].target}" class="next">${choices[i].content}</div>`
-//}
-//document.querySelector('body').innerHTML = templateCore();
