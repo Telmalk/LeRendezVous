@@ -1,9 +1,9 @@
-
-//let toto = tl1[0].answers[0].target;
-
 let timeLine = [tl1, tl2];
 
-//console.log(timeLine[toto[0]][toto[1]]);
+const templateCore = () => {
+
+};
+
 
 
 const display = (text, choices) => {
@@ -22,7 +22,6 @@ const display = (text, choices) => {
                 let target = this.getAttribute("data-target");
                 let wesh = target.split(',');
                 console.log(wesh);
-                //console.log(timeLine[wesh[0]][wesh[1]].answers);
                 display(timeLine[wesh[0]][wesh[1]].situation, timeLine[wesh[0]][wesh[1]].answers);
 
             });
@@ -30,14 +29,4 @@ const display = (text, choices) => {
 };
 
 
-let but = display(timeLine[0][0].situation, timeLine[0][0].answers);
-
-
-
-/*but[0].addEventListener("click", function () {
-let target = this.getAttribute("data-target");
-let wesh = target.split(',');
-display(timeLine[wesh[0]][wesh[1]].situation, timeLine[wesh[0]][wesh[1]].answers);
-
-});*/
-//console.log(wesh)
+display(timeLine[0][0].situation, timeLine[0][0].answers);

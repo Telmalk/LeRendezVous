@@ -21,10 +21,27 @@ const tl1 = [
       		},
       		answer3 = {
         		content: "grande école",
-        		target: [1, 1]
+        		target: [1, 0]
       		}
     	]
-	}
+	},
+    {
+        situation: "Bien Vu Man :",
+        answers: [
+            answer1 = {
+                content: "Un couteau",
+                target: [1, 0]
+            },
+            answer2 = {
+                content: "Un sifflet",
+                target: [0, 2]
+            },
+            answer3 = {
+                content: "TOTO",
+                target: [1, 0]
+            }
+        ]
+    }
 ];
 
 const tl2 = [
