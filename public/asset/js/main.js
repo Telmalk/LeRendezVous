@@ -1,13 +1,14 @@
 let timeLine = [tl1, tl2];
 
-const templateCore = (situation, choices) => {
+const templateCore = (situation, choices, character, background) => {
     document.querySelector("body").innerHTML = "";
     let myDiv = document.createElement('div');
-    let inteCore = `<section class="core">
+     myDiv.innerHTML = `
+<section class="core">
        <div class="container">
-           <img class="imgSituation" src="./asset/img/desert-island.png">
+           <img class="imgSituation" src="${background}">
            <div class="characterContainer">
-               <img class="characterImg" src="./asset/img/brontis.jpg">
+               <img class="characterImg" src="${character}">
            </div>
            <div class="bubbleText">
                <p class="text situation">${situation}</p>
@@ -18,7 +19,6 @@ const templateCore = (situation, choices) => {
        </div>
     </section>`;
 
-    myDiv.innerHTML = inteCore;
     document.querySelector('body').appendChild(myDiv);
     let answerContainer = document.querySelector(".answerContainer");
     for (let i = 0; i < choices.length; i++) {
@@ -31,19 +31,18 @@ const templateCore = (situation, choices) => {
     return myDiv;
 };
 
-const display = (situation, choices) => {
+const display = (situation, choices, character, background) => {
     let body = document.querySelector('body');
-    let newChoice = templateCore(situation, choices);
+    let newChoice = templateCore(situation, choices, character, background);
     body.appendChild(newChoice);
     let but = document.querySelectorAll(".answer");
     for (let i = 0; i < but.length; i++) {
         but[i].addEventListener("click", function () {
-            console.log('toto');
             let target = this.getAttribute("data-target");
             let redirection = target.split(',');
-            display(timeLine[redirection[0]][redirection[1]].situation, timeLine[redirection[0]][redirection[1]].answers);
+            display(timeLine[redirection[0]][redirection[1]].situation, timeLine[redirection[0]][redirection[1]].answers, timeLine[redirection[0]][redirection[1]].character, timeLine[redirection[0]][redirection[1]].background);
         });
     }
 };
 
-display(timeLine[0][0].situation, timeLine[0][0].answers);
+display(timeLine[0][0].situation, timeLine[0][0].answers, timeLine[0][0].character, timeLine[0][0].background);

@@ -50,3 +50,16 @@
     color: white;
 }
 
+.situation {
+    margin-bottom: 10px;
+}
+
+.answer {
+    margin-bottom: 2px;
+}
+.answer:hover {
+    width: 40%;
+    background: white;
+    color: black;
+}
+
