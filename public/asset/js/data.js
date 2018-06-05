@@ -1,26 +1,33 @@
 const tl1 = [
 	{
-		situation: "Wesh gros, présente toi",
+		situation: `Bienvenue à toi Bienvenue à toi Bienvenue à toiBienvenue à toiBienvenue à toi
+		Bienvenue à toiBienvenue à toiBienvenue à toiBienvenue à toiBienvenue à toiBienvenue à toi
+		Bienvenue <br /> à toiBienvenue à toiBienvenue à toiBienvenue
+		 à toiBienvenue à toi`,
+        character: "./asset/img/brontis.jpg",
+        background :"./asset/img/desert-island.png",
 		answers: [
       		answer1 = {
-        		content: "Suivant",
+        		content: "> Suivant",
         		target: [0, 1]
       		}
     	]
 	},
 	{
 		situation: "Je suis Bob, j'ai 22ans, 3 femmes 2 enfants, et je voudrais aller en :",
-		answers: [
+        character: "./asset/img/desert-island.png",
+        background :"./asset/img/brontis.jpg",
+        answers: [
       		answer1 = {
-        		content: "bachelor 3D",
+        		content: "> bachelor 3D",
         		target: [1, 0]
       		},
       		answer2 = {
-        		content: "bachelor Web",
+        		content: "> bachelor Web",
         		target: [0, 2]
       		},
       		answer3 = {
-        		content: "grande école",
+        		content: "> grande école",
         		target: [1, 0]
       		}
     	]
@@ -29,15 +36,15 @@ const tl1 = [
         situation: "Bien Vu Man :",
         answers: [
             answer1 = {
-                content: "Un couteau",
+                content: "> Un couteau",
                 target: [1, 0]
             },
             answer2 = {
-                content: "Un sifflet",
+                content: "> Un sifflet",
                 target: [0, 2]
             },
             answer3 = {
-                content: "TOTO",
+                content: "> TOTO",
                 target: [1, 0]
             }
         ]
@@ -47,9 +54,10 @@ const tl1 = [
 const tl2 = [
     {
         situation: "Vous êtes mort psk 3D",
+        character: "./asset/img/brontis.jpg",
         answers: [
             answer1 = {
-                content: "Recommencer",
+                content: "> Recommencer",
                 target: [0, 0]
             }
         ],
