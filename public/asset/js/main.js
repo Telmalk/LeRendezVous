@@ -8,7 +8,10 @@ const imageFade = () => {
       if (visible !== 1) {
           fade.style.opacity = visible;
           visible += 0.1;
-          console.log("toto");
+          visible = Math.round(10*visible) / 10;
+          console.log(visible);
+      } else{
+          clearInterval(intervalID);
       }
   }, 30);
 };
@@ -50,7 +53,7 @@ const display = (situation, choices, character, background) => {
     let newChoice = templateCore(situation, choices, character, background);
     body.appendChild(newChoice);
     imageFade();
-    clearInterval(intervalID);
+    //clearInterval(intervalID);
     let but = document.querySelectorAll(".answer");
     for (let i = 0; i < but.length; i++) {
         but[i].addEventListener("click", function () {
