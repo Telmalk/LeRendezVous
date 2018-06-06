@@ -5,7 +5,7 @@ const tl1 = [
 		Bienvenue <br /> à toiBienvenue à toiBienvenue à toiBienvenue
 		 à toiBienvenue à toi`,
         character: "./asset/img/brontis.jpg",
-        background :"./asset/img/desert-island.png",
+        background: "./asset/img/desert-island.png",
 		answers: [
       		answer1 = {
         		content: "> Suivant",
@@ -15,7 +15,7 @@ const tl1 = [
 	},
 	{
 		situation: "Je suis Bob, j'ai 22ans, 3 femmes 2 enfants, et je voudrais aller en :",
-        character: "./asset/img/desert-island.png",
+        character: "./asset/img/jack.jpg",
         background :"./asset/img/brontis.jpg",
         answers: [
       		answer1 = {
@@ -55,6 +55,8 @@ const tl2 = [
     {
         situation: "Vous êtes mort psk 3D",
         character: "./asset/img/brontis.jpg",
+        background: "./asset/img/denis.jpg",
+        audio: "./asset/audio/denis.mp3",
         answers: [
             answer1 = {
                 content: "> Recommencer",

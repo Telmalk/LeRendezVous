@@ -14,25 +14,24 @@ const imageFade = (fade) => {
   }, 30);
 };
 
-
-const templateCore = (situation, choices, character, background) => {
+const templateCore = (situation, choices, character, background, audio) => {
     document.querySelector("body").innerHTML = "";
     let myDiv = document.createElement('div');
      myDiv.innerHTML = `
-<section class="core">
-       <div class="container">
-           <img class="imgSituation" src="${background}">
-           <div class="characterContainer">
-               <img class="characterImg" src="${character}">
-           </div>
-           <div class="bubbleText">
-               <p class="text situation">${situation}</p>
-               <div class="answerContainer">
-               </div>
-               <div class="arrow-left"></div>
-           </div>
-       </div>
-    </section>`;
+        <section class="core">
+            <div class="container">
+                <img class="imgSituation" src="${background}">
+                <div class="characterContainer">
+                    <img class="characterImg" src="${character}">
+                </div>
+                <div class="bubbleText">
+                   <p class="text situation">${situation}</p>
+                   <div class="answerContainer">
+                   </div>
+                   <div class="arrow-left"></div>
+                   </div>
+             </div>
+        </section>`;
     document.querySelector('body').appendChild(myDiv);
     let answerContainer = document.querySelector(".answerContainer");
     for (let i = 0; i < choices.length; i++) {
@@ -42,12 +41,19 @@ const templateCore = (situation, choices, character, background) => {
         myAnswer.classList.add('text', 'answer');
         answerContainer.appendChild(myAnswer);
     }
+    if (audio !== false) {
+        let aud = document.createElement("audio");
+        aud.src = audio;
+        aud.play();
+        console.log(aud);
+        myDiv.appendChild(aud);
+    }
     return myDiv;
 };
 
-const display = (situation, choices, character, background) => {
+const display = (situation, choices, character, background, audio = false) => {
     let body = document.querySelector('body');
-    let newChoice = templateCore(situation, choices, character, background);
+    let newChoice = templateCore(situation, choices, character, background, audio);
     body.appendChild(newChoice);
     let fade = document.querySelector(".imgSituation");
     imageFade(fade);
@@ -56,7 +62,11 @@ const display = (situation, choices, character, background) => {
         but[i].addEventListener("click", function() {
             let target = this.getAttribute("data-target");
             let redirection = target.split(',');
-            display(timeLine[redirection[0]][redirection[1]].situation, timeLine[redirection[0]][redirection[1]].answers, timeLine[redirection[0]][redirection[1]].character, timeLine[redirection[0]][redirection[1]].background);
+            display(timeLine[redirection[0]][redirection[1]].situation,
+                timeLine[redirection[0]][redirection[1]].answers,
+                timeLine[redirection[0]][redirection[1]].character,
+                timeLine[redirection[0]][redirection[1]].background,
+                timeLine[redirection[0]][redirection[1]].audio);
         });
     }
 };
