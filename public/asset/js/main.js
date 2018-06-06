@@ -1,4 +1,21 @@
 let timeLine = [tl1, tl2];
+let intervalID;
+
+const imageFade = () => {
+    let fade = document.querySelector(".imgSituation");
+    let visible = 0.0;
+    intervalID = setInterval(function() {
+      if (visible !== 1) {
+          fade.style.opacity = visible;
+          visible += 0.1;
+          visible = Math.round(10*visible) / 10;
+          console.log(visible);
+      } else{
+          clearInterval(intervalID);
+      }
+  }, 30);
+};
+
 
 const templateCore = (situation, choices, character, background) => {
     document.querySelector("body").innerHTML = "";
@@ -18,8 +35,8 @@ const templateCore = (situation, choices, character, background) => {
            </div>
        </div>
     </section>`;
-
     document.querySelector('body').appendChild(myDiv);
+
     let answerContainer = document.querySelector(".answerContainer");
     for (let i = 0; i < choices.length; i++) {
         let myAnswer = document.createElement('p');
@@ -30,11 +47,13 @@ const templateCore = (situation, choices, character, background) => {
     }
     return myDiv;
 };
-
 const display = (situation, choices, character, background) => {
+
     let body = document.querySelector('body');
     let newChoice = templateCore(situation, choices, character, background);
     body.appendChild(newChoice);
+    imageFade();
+    //clearInterval(intervalID);
     let but = document.querySelectorAll(".answer");
     for (let i = 0; i < but.length; i++) {
         but[i].addEventListener("click", function () {
