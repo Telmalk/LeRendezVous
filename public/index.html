@@ -18,13 +18,14 @@
                 <p class="introText">Vous vous apprêtez à participer à l’entretien d’admission d’HETIC.
                     Pourrez-vous déjouer les pièges tendus par Brontis et être admis dans la meilleure
                 école du web ?  Seul l’avenir nous le dira …</p>
-                <p class="introTextAjax">Jusqu’à maintenant sur 102 personnes ayant tentées l’expérience, seulement 3 personnes
+                <p class="introTextAjax">Jusqu’à maintenant sur <span class="spanTotal"></span> personnes ayant tentées l’expérience, seulement <span class="spanAdmis"></span> personnes
                     ont été admis,
-                20 personnes ont été recalé et 99 sont … Enfin vous verrez bien :)</p>
+                <span class="spanNonAdmis"></span> personnes ont été recalé et <span class="spanAutres"></span> sont … Enfin vous verrez bien :)</p>
                 <div class="playBtn" onclick="display(timeLine[0][0].situation, timeLine[0][0].answers, timeLine[0][0].character, timeLine[0][0].background)">Commencer l'entretien</div>
             </div>
         </div>
     </body>
+    <script src="./asset/js/ajaxRequest.js"></script>
     <script src="./asset/js/data.js"></script>
     <script src="./asset/js/main.js"></script>
 </html>
