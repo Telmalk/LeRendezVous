@@ -299,7 +299,7 @@ const islandOtarieTL = [
         situation: "Alors que vous arrivez au niveau de l'homme, ce dernier se retourne brusquement en vous fixant. Il s'énonce: 'AH !'",
         character: "./asset/img/denisMin.jpg",
         background: "./asset/img/denis.jpg",
-        audio: "./asset/audio/denis.mp3"
+        audio: "./asset/audio/denis.mp3",
         answers: [
             answer1 = {
                 content: "Le laisser parler.",
