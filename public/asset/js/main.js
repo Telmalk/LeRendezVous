@@ -1,4 +1,4 @@
-let timeLine = [brontisOfficeTL, endsTL, islandTL];
+let timeLine = [brontisOfficeTL, endsTL, islandOtarieTL, islandJackSparrowTL];
 
 const imageFade = (fade) => {
     let visible = 0.0;
