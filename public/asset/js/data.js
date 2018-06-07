@@ -330,7 +330,7 @@ const islandOtarieTL = [
         situation: "AH ! (L'homme rentre alors un bulletin de vote dans une urne.) Je vais maintenant procéder au dépouillement, les votes sont unanimes 1 à 0 contre vous. Bob, les aventuriers ont décidé de vous éliminer et la sentence est irrévocable.",
         character: "./asset/img/denisMin.jpg",
         background: "./asset/img/denisUrne.jpg",
-        audio: "./asset/audio/denis.mp3",
+        audio: "./asset/audio/ahBrontis.mp3",
         answers: [
             answer1 = {
                 content: "Suivant",
