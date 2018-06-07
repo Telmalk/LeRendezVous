@@ -70,7 +70,12 @@ const brontisOfficeTL = [
         situation: "C'est une otarie impressionante ! Vous m'avez impressioné par votre capacité d'adaptation. Félicitation, je suis certain que vous brillerez dans notre bachelor Web.",
         character: "./asset/img/brontis.jpg",
         background: "./asset/img/desert-island.png",
-        answers: []
+        answers: [
+            answer1 = {
+                content: "Recommencer",
+                target: [0, 0]
+            }
+        ]
   },
   {
         situation: "Vous rentrez dans le bureau de Brontis pour continuer l'entretien.",
