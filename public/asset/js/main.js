@@ -83,11 +83,8 @@ const display = (situation, choices, character, background, audio = false, redir
     let newChoice = templateCore(situation, choices, character, background, audio);
     body.appendChild(newChoice);
     console.log(redirection[0]);
-    if (redirection[0] != 1) {
-        let fade = document.querySelector(".imgSituation");
-        imageFade(fade);
-    } else
-        console.log("toto");
+    let fade = document.querySelector(".imgSituation");
+    imageFade(fade);
     let but = document.querySelectorAll(".answer");
     for (let i = 0; i < but.length; i++) {
         but[i].addEventListener("click", function() {
