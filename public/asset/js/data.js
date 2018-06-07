@@ -636,7 +636,7 @@ const islandJackSparrowTL = [
                 target: [3, 14]
             }
         ],
-    },
+    },  
     {
         situation: "Après 3 jours et quelques comas éthyliques vous lui demander de vous ramener à HETIC, ce qu'il accepte.",
         character: "./asset/img/brontis.jpg",
@@ -648,4 +648,4 @@ const islandJackSparrowTL = [
             }
         ],
     },
-]
+];
