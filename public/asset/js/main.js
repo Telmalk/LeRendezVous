@@ -103,6 +103,6 @@ const display = (situation, choices, character, background, audio = false, redir
     }
 };
 
-display(timeLine[0][0].situation, timeLine[0][0].answers,
+/*display(timeLine[0][0].situation, timeLine[0][0].answers,
     timeLine[0][0].character, timeLine[0][0].background,
-    );
+    );*/
