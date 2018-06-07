@@ -9,7 +9,7 @@ const imageFade = (fade) => {
           visible = Math.round(10 * visible) / 10;
       } else
           clearInterval(intervalID);
-  }, 30);
+  }, 30);   
 };
 
 const transiText = (text, target, answerContainer, choices, tabAnswer) => {
